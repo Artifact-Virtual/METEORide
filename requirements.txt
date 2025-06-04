@@ -22,7 +22,7 @@ coincurve==18.0.0
 base58==2.1.1
 mnemonic==0.20
 cryptography==44.0.1
-pycryptodome==3.19.0
+pycryptodome==3.19.1
 
 # Data processing
 pandas==2.0.3
@@ -38,7 +38,7 @@ loguru==0.7.0
 # API and integration
 fastapi==0.101.1
 uvicorn==0.23.2
-requests==2.31.0
+requests==2.32.2
 aiohttp==3.11.0b0
 
 # Development tools
