@@ -1,13 +1,13 @@
 # Meteor IDE: Blockchain Development Environment
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/artifactvirtual/meteor-ide?style=flat-square)
-![GitHub license](https://img.shields.io/github/license/artifactvirtual/meteor-ide?style=flat-square)
-![GitHub issues](https://img.shields.io/github/issues/artifactvirtual/meteor-ide?style=flat-square)
-![GitHub stars](https://img.shields.io/github/stars/artifactvirtual/meteor-ide?style=flat-square)
-![GitHub forks](https://img.shields.io/github/forks/artifactvirtual/meteor-ide?style=flat-square)
+![Hardhat](https://img.shields.io/badge/Hardhat-TypeScript-blue?style=flat-square)
+![Rust](https://img.shields.io/badge/Rust-Blockchain-orange?style=flat-square)
+![Solidity](https://img.shields.io/badge/Solidity-Ethereum-green?style=flat-square)
+![Vyper](https://img.shields.io/badge/Vyper-Security-yellow?style=flat-square)
+![Cairo](https://img.shields.io/badge/Cairo-StarkNet-purple?style=flat-square)
 
 **License:** [MIT License](https://opensource.org/licenses/MIT)  
-**Version:** [1.0.0](https://github.com/artifactvirtual/meteor-ide)  
+**Version:** [1.0.0](https://github.com/Artifact-Virtual/METEORide)  
 **Last Updated:** May 2025  
 
 A complete development environment for building blockchain applications across multiple platforms and languages, designed to accelerate blockchain development with standardized tools and practices.
@@ -73,7 +73,7 @@ meteor-ide/
 
 ```bash
 # Clone the repository
-git clone https://github.com/artifactvirtual/meteor-ide.git
+git clone https://github.com/Artifact-Virtual/METEORide.git
 cd meteor-ide
 
 # Install JavaScript dependencies
@@ -235,7 +235,7 @@ Performance comparison of Meteor IDE libraries against alternatives:
 ## Community & Support
 
 - [Discord Community](https://discord.gg/artifactvirtual)
-- [GitHub Discussions](https://github.com/artifactvirtual/meteor-ide/discussions)
+- [GitHub Discussions](https://github.com/Artifact-Virtual/METEORide/discussions)
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/meteor-ide-blockchain)
 
 ## Contributing
