@@ -1,14 +1,20 @@
-# Bedrock: Comprehensive Blockchain Development Environment
+# Meteor IDE: Comprehensive Blockchain Development Environment
+
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/artifactvirtual/meteor-ide?style=flat-square)
+![GitHub license](https://img.shields.io/github/license/artifactvirtual/meteor-ide?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/artifactvirtual/meteor-ide?style=flat-square)
+![GitHub stars](https://img.shields.io/github/stars/artifactvirtual/meteor-ide?style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/artifactvirtual/meteor-ide?style=flat-square)
 
 **License:** [MIT License](https://opensource.org/licenses/MIT)  
-**Version:** [1.0.0](https://github.com/artifactvirtual/bedrock)  
+**Version:** [1.0.0](https://github.com/artifactvirtual/meteor-ide)  
 **Last Updated:** May 2025  
 
 A complete development environment for building blockchain applications across multiple platforms and languages, designed to accelerate blockchain development with standardized tools and practices.
 
 ## Overview
 
-Bedrock provides developers with a unified framework for blockchain development, eliminating the complexity of working across different chains and languages. Whether you're building on Ethereum, Solana, Polkadot, or other platforms, Bedrock offers consistent tools, patterns, and documentation.
+Meteor IDE provides developers with a unified framework for blockchain development, eliminating the complexity of working across different chains and languages. Whether you're building on Ethereum, Solana, Polkadot, or other platforms, Meteor IDE offers consistent tools, patterns, and documentation.
 
 ## Features
 
@@ -41,10 +47,10 @@ Bedrock provides developers with a unified framework for blockchain development,
 
 ## Project Structure
 
-The Bedrock environment follows a well-organized structure:
+The Meteor IDE environment follows a well-organized structure:
 
 ```
-bedrock/
+meteor-ide/
 ├── core/                  # Core libraries and shared components
 ├── contracts/             # Smart contracts in various languages
 ├── scripts/               # Deployment, migration, and utility scripts
@@ -67,8 +73,8 @@ bedrock/
 
 ```bash
 # Clone the repository
-git clone https://github.com/artifactvirtual/bedrock.git
-cd bedrock
+git clone https://github.com/artifactvirtual/meteor-ide.git
+cd meteor-ide
 
 # Install JavaScript dependencies
 npm install
@@ -128,7 +134,7 @@ npm run deploy:local  # In another terminal
 ### Using the Rust Blockchain Library
 
 ```rust
-use bedrock_blockchain::{
+use meteor_blockchain::{
    ethereum::EthereumClient,
    common::BlockchainClient,
    common::Address,
@@ -176,7 +182,7 @@ fn main() -> anyhow::Result<()> {
 
 ## Security Features
 
-Bedrock integrates security tools and best practices to help developers build safer smart contracts:
+Meteor IDE integrates security tools and best practices to help developers build safer smart contracts:
 
 - Static Analysis: Automated tools to detect common vulnerabilities.
 - Test Coverage: Framework for comprehensive testing of edge cases.
@@ -218,19 +224,19 @@ Bedrock integrates security tools and best practices to help developers build sa
 
 ## Benchmarks
 
-Performance comparison of Bedrock libraries against alternatives:
+Performance comparison of Meteor IDE libraries against alternatives:
 
-| Operation             | Bedrock | Alternative | Improvement |
-|-----------------------|---------|-------------|-------------|
-| Contract Deployment   | 3.2s    | 5.1s        | 37%         |
-| Transaction Signing   | 12ms    | 18ms        | 33%         |
-| RPC Query Batching    | 85ms    | 140ms       | 39%         |
+| Operation             | Meteor IDE | Alternative | Improvement |
+|-----------------------|------------|-------------|-------------|
+| Contract Deployment   | 3.2s       | 5.1s        | 37%         |
+| Transaction Signing   | 12ms       | 18ms        | 33%         |
+| RPC Query Batching    | 85ms       | 140ms       | 39%         |
 
 ## Community & Support
 
 - [Discord Community](https://discord.gg/artifactvirtual)
-- [GitHub Discussions](https://github.com/artifactvirtual/bedrock/discussions)
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/bedrock-blockchain)
+- [GitHub Discussions](https://github.com/artifactvirtual/meteor-ide/discussions)
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/meteor-ide-blockchain)
 
 ## Contributing
 
