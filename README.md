@@ -1,4 +1,4 @@
-# Meteor IDE: Comprehensive Blockchain Development Environment
+# Meteor IDE: Blockchain Development Environment
 
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/artifactvirtual/meteor-ide?style=flat-square)
 ![GitHub license](https://img.shields.io/github/license/artifactvirtual/meteor-ide?style=flat-square)
