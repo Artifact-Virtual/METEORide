@@ -1,0 +1,97 @@
+<div class="assistant-container">
+  <div class="assistant-header">
+    <h3>AI Assistant</h3>
+    <span class="model-info" *ngIf="aiModel">{{ aiModel }}</span>
+  </div>
+  
+  <div class="form-container">
+    <form [formGroup]="queryForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill" class="query-input">
+        <mat-label>Ask a question or describe what you need</mat-label>
+        <textarea 
+          matInput 
+          formControlName="query" 
+          placeholder="E.g., Write a function to transfer tokens"
+          rows="3"
+        ></textarea>
+        <mat-error *ngIf="queryForm.controls['query'].hasError('required')">
+          Query is required
+        </mat-error>
+        <mat-error *ngIf="queryForm.controls['query'].hasError('minlength')">
+          Query must be at least 3 characters
+        </mat-error>
+      </mat-form-field>
+      
+      <div class="settings-row">
+        <mat-form-field appearance="outline" class="temperature-slider">
+          <mat-label>Temperature: {{ queryForm.controls['temperature'].value }}</mat-label>
+          <input 
+            matInput
+            type="range"
+            formControlName="temperature"
+            min="0"
+            max="1"
+            step="0.1"
+          >
+          <mat-hint>Lower = more precise, Higher = more creative</mat-hint>
+        </mat-form-field>
+      </div>
+      
+      <div class="button-row">
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          [disabled]="queryForm.invalid || isLoading || !aiServiceAvailable"
+        >
+          <mat-icon>send</mat-icon>
+          {{ isLoading ? 'Generating...' : 'Generate' }}
+        </button>
+        
+        <button
+          mat-button
+          type="button"
+          [disabled]="isLoading || !response$.value"
+          (click)="clearResponse()"
+        >
+          <mat-icon>delete</mat-icon>
+          Clear
+        </button>
+      </div>
+    </form>
+  </div>
+  
+  <div class="response-container" *ngIf="response$.value">
+    <div class="response-header">
+      <h4>Response</h4>
+      <div class="response-actions">
+        <button
+          mat-icon-button
+          [disabled]="isLoading || !response$.value"
+          matTooltip="Insert at cursor position"
+          (click)="insertResponseToEditor()"
+        >
+          <mat-icon>add_circle_outline</mat-icon>
+        </button>
+        
+        <button
+          mat-icon-button
+          [disabled]="isLoading || !response$.value"
+          matTooltip="Replace editor content"
+          (click)="replaceEditorContent()"
+        >
+          <mat-icon>published_with_changes</mat-icon>
+        </button>
+      </div>
+    </div>
+    
+    <div class="response-content">
+      <pre>{{ response$.value }}</pre>
+    </div>
+  </div>
+  
+  <div class="service-status" *ngIf="!aiServiceAvailable">
+    <mat-icon color="warn">error_outline</mat-icon>
+    <span>AI service is currently unavailable</span>
+  </div>
+</div>

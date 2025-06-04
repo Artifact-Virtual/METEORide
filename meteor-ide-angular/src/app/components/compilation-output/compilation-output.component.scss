@@ -1,0 +1,177 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.compilation-output {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--surface-light);
+  border-radius: 4px;
+  overflow: hidden;
+  
+  :host-context(.dark-theme) & {
+    background-color: var(--surface-dark);
+  }
+  
+  &.has-error {
+    .output-header {
+      background-color: rgba(239, 68, 68, 0.1);
+      border-bottom-color: rgba(239, 68, 68, 0.2);
+      
+      :host-context(.dark-theme) & {
+        background-color: rgba(239, 68, 68, 0.15);
+        border-bottom-color: rgba(239, 68, 68, 0.3);
+      }
+      
+      .error-icon {
+        color: var(--error-color);
+      }
+    }
+  }
+  
+  &.has-warning {
+    .output-header {
+      background-color: rgba(245, 158, 11, 0.1);
+      border-bottom-color: rgba(245, 158, 11, 0.2);
+      
+      :host-context(.dark-theme) & {
+        background-color: rgba(245, 158, 11, 0.15);
+        border-bottom-color: rgba(245, 158, 11, 0.3);
+      }
+      
+      .warning-icon {
+        color: var(--warning-color);
+      }
+    }
+  }
+  
+  .output-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 15px;
+    background-color: var(--surface-light);
+    border-bottom: 1px solid var(--border-light);
+    
+    :host-context(.dark-theme) & {
+      background-color: var(--surface-dark);
+      border-bottom-color: var(--border-dark);
+    }
+    
+    .header-info {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      
+      .error-icon {
+        color: var(--error-color);
+      }
+      
+      .warning-icon {
+        color: var(--warning-color);
+      }
+      
+      .success-icon {
+        color: var(--success-color);
+      }
+      
+      .status-text {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--text-primary-light);
+        
+        :host-context(.dark-theme) & {
+          color: var(--text-primary-dark);
+        }
+      }
+    }
+    
+    .header-actions {
+      display: flex;
+      gap: 5px;
+    }
+  }
+  
+  .output-content {
+    flex: 1;
+    overflow: auto;
+    padding: 15px;
+    position: relative;
+    background-color: var(--bg-light);
+    
+    :host-context(.dark-theme) & {
+      background-color: var(--bg-dark);
+    }
+    
+    mat-spinner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    pre {
+      margin: 0;
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 0.9rem;
+      white-space: pre-wrap;
+      color: var(--text-primary-light);
+      
+      :host-context(.dark-theme) & {
+        color: var(--text-primary-dark);
+      }
+      
+      ::ng-deep {
+        .error {
+          color: var(--error-color);
+          font-weight: 500;
+        }
+        
+        .warning {
+          color: var(--warning-color);
+        }
+        
+        .success {
+          color: var(--success-color);
+        }
+        
+        .file-ref {
+          color: var(--primary-color);
+          text-decoration: underline;
+          cursor: pointer;
+        }
+        
+        .line-number {
+          color: var(--text-secondary-light);
+          
+          :host-context(.dark-theme) & {
+            color: var(--text-secondary-dark);
+          }
+        }
+      }
+    }
+    
+    .no-output {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      color: var(--text-secondary-light);
+      text-align: center;
+      
+      :host-context(.dark-theme) & {
+        color: var(--text-secondary-dark);
+      }
+      
+      mat-icon {
+        font-size: 48px;
+        width: 48px;
+        height: 48px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
